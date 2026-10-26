@@ -38,6 +38,9 @@ pytest
 ```
 `load` exits non-zero if any quality check reports violations.
 
+Tests (`pytest`, 13 tests) cover the pipeline and the CLI; a GitHub Actions workflow
+(`.github/workflows/scd2-pipeline.yml`) runs them on pushes and PRs touching this project.
+
 ## Sample data
 `data/sample/` holds 4 hand-written snapshots exercising: attribute change (customer 1),
 new key (4), deletion then re-appearance (3), and unchanged rows. The expected result is
