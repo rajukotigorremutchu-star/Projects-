@@ -1,0 +1,9 @@
+customer_id,name,city,plan,valid_from,valid_to,is_current
+1,Ada,Austin,free,2026-01-01,2026-01-02,false
+1,Ada,Austin,pro,2026-01-02,2026-01-03,false
+1,Ada,Osaka,pro,2026-01-03,,true
+2,Bo,Berlin,pro,2026-01-01,2026-01-04,false
+2,Bo,Berlin,team,2026-01-04,,true
+3,Chi,Chennai,team,2026-01-01,2026-01-03,false
+3,Chi,Chennai,team,2026-01-04,,true
+4,Dee,Dublin,free,2026-01-02,,true
