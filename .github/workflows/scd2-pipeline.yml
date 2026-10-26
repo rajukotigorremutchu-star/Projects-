@@ -1,0 +1,19 @@
+name: scd2-pipeline
+on:
+  push:
+    paths: ["projects/2026-10-26-scd2-snapshot-pipeline/**"]
+  pull_request:
+    paths: ["projects/2026-10-26-scd2-snapshot-pipeline/**"]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/2026-10-26-scd2-snapshot-pipeline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q
