@@ -1,0 +1,12 @@
+### Register an endpoint (secret is returned once)
+POST http://127.0.0.1:8000/endpoints
+Content-Type: application/json
+
+{"url": "http://127.0.0.1:9000/hook", "event_types": ["order.*"]}
+
+### Publish an event (safe to retry thanks to Idempotency-Key)
+POST http://127.0.0.1:8000/events
+Content-Type: application/json
+Idempotency-Key: order-42-paid
+
+{"type": "order.paid", "data": {"order_id": 42, "amount_cents": 1999}}
