@@ -1,0 +1,362 @@
+{
+  "fixed_window": {
+    "allowed": 8,
+    "denied": 4,
+    "decisions": [
+      {
+        "t": 0,
+        "key": "a",
+        "allowed": true,
+        "remaining": 2,
+        "retry_after": 0.0
+      },
+      {
+        "t": 1,
+        "key": "a",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 2,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 3,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 7
+      },
+      {
+        "t": 3,
+        "key": "b",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 4,
+        "key": "b",
+        "allowed": false,
+        "remaining": 1,
+        "retry_after": 6
+      },
+      {
+        "t": 9,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 1
+      },
+      {
+        "t": 10,
+        "key": "a",
+        "allowed": true,
+        "remaining": 2,
+        "retry_after": 0.0
+      },
+      {
+        "t": 11,
+        "key": "a",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 12,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 15,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 5
+      },
+      {
+        "t": 21,
+        "key": "a",
+        "allowed": true,
+        "remaining": 2,
+        "retry_after": 0.0
+      }
+    ]
+  },
+  "sliding_log": {
+    "allowed": 8,
+    "denied": 4,
+    "decisions": [
+      {
+        "t": 0,
+        "key": "a",
+        "allowed": true,
+        "remaining": 2,
+        "retry_after": 0.0
+      },
+      {
+        "t": 1,
+        "key": "a",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 2,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 3,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 7
+      },
+      {
+        "t": 3,
+        "key": "b",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 4,
+        "key": "b",
+        "allowed": false,
+        "remaining": 1,
+        "retry_after": 9
+      },
+      {
+        "t": 9,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 1
+      },
+      {
+        "t": 10,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 11,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 12,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 15,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 5
+      },
+      {
+        "t": 21,
+        "key": "a",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      }
+    ]
+  },
+  "sliding_counter": {
+    "allowed": 6,
+    "denied": 6,
+    "decisions": [
+      {
+        "t": 0,
+        "key": "a",
+        "allowed": true,
+        "remaining": 2,
+        "retry_after": 0.0
+      },
+      {
+        "t": 1,
+        "key": "a",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 2,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 3,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 10.333
+      },
+      {
+        "t": 3,
+        "key": "b",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 4,
+        "key": "b",
+        "allowed": false,
+        "remaining": 1,
+        "retry_after": 11.0
+      },
+      {
+        "t": 9,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 4.333
+      },
+      {
+        "t": 10,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 3.333
+      },
+      {
+        "t": 11,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 2.333
+      },
+      {
+        "t": 12,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 1.333
+      },
+      {
+        "t": 15,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 21,
+        "key": "a",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      }
+    ]
+  },
+  "token_bucket": {
+    "allowed": 9,
+    "denied": 3,
+    "decisions": [
+      {
+        "t": 0,
+        "key": "a",
+        "allowed": true,
+        "remaining": 2,
+        "retry_after": 0.0
+      },
+      {
+        "t": 1,
+        "key": "a",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 2,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 3,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 0.333
+      },
+      {
+        "t": 3,
+        "key": "b",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 4,
+        "key": "b",
+        "allowed": false,
+        "remaining": 1,
+        "retry_after": 2.333
+      },
+      {
+        "t": 9,
+        "key": "a",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      },
+      {
+        "t": 10,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 11,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 12,
+        "key": "a",
+        "allowed": false,
+        "remaining": 0,
+        "retry_after": 1.333
+      },
+      {
+        "t": 15,
+        "key": "a",
+        "allowed": true,
+        "remaining": 0,
+        "retry_after": 0.0
+      },
+      {
+        "t": 21,
+        "key": "a",
+        "allowed": true,
+        "remaining": 1,
+        "retry_after": 0.0
+      }
+    ]
+  }
+}
