@@ -1,0 +1,20 @@
+Severity: SEV1
+
+1. [CRITICAL] checkout: write failed: no space left on device <path> (x1)
+   Runbook: Disk usage critical (disk-full, score 10.60)
+   - Run `df -h` and `du -xh --max-depth=1` on the full mount to find the biggest directory.
+   - Rotate and compress logs; delete files in the tmp directory older than 7 days.
+   - If the volume is a cloud disk, expand it online and grow the filesystem.
+   - Add an alert at 80 percent usage to prevent recurrence.
+2. [ERROR] orders-api: timeout acquiring connection from pool after 30000ms (pool size <n>) request=<uuid> (x12)
+   Runbook: Database connection pool exhausted (db-connection-pool, score 14.11)
+   - Check active connections with `SELECT count(*) FROM pg_stat_activity` grouped by application.
+   - Kill idle-in-transaction sessions older than 5 minutes.
+   - Temporarily raise the pool size by at most 20 percent and restart one pod at a time.
+   - Look for a recent deploy that leaks connections (missing close or commit).
+3. [WARN] orders-api: retrying query attempt <n> for <ip> (x2)
+   Runbook: Upstream API rate limiting (rate-limit-429, score 3.02)
+   - Honor the Retry-After header and apply exponential backoff with jitter.
+   - Check for a retry storm caused by a recent failure and pause the batch job.
+   - Cache repeated lookups and coalesce duplicate requests.
+   - Request a quota increase from the vendor if sustained.

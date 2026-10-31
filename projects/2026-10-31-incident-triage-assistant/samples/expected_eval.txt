@@ -1,0 +1,5 @@
+[normalized] positives=24 hit@1=0.958 hit@3=1.000 mrr=0.972 abstain_acc=0.5
+  miss: {'id': 'oom-3', 'expected': 'oom-killed', 'got': ['disk-full', 'dns-resolution', 'oom-killed'], 'ok': False}
+  miss: {'id': 'neg-2', 'expected': None, 'got': ['rate-limit-429'], 'ok': False}
+[raw-example] positives=24 hit@1=0.958 hit@3=1.000 mrr=0.972 abstain_acc=0.5
+[random baseline, seed 0] hit@1=0.125

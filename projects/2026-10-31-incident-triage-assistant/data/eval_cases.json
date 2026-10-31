@@ -1,0 +1,429 @@
+[
+ {
+  "id": "pool-1",
+  "expected_runbook": "db-connection-pool",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:01:01Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:02:02Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:03:03Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:04:04Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:05:05Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:06:06Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:07:07Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:08:08Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:09:09Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:10:10Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)",
+   "2026-10-30T10:11:11Z ERROR [orders-api] timeout acquiring connection from pool after 30000ms (pool size 20)"
+  ]
+ },
+ {
+  "id": "pool-2",
+  "expected_runbook": "db-connection-pool",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [billing] FATAL: sorry, too many clients already",
+   "2026-10-30T10:01:01Z ERROR [billing] FATAL: sorry, too many clients already",
+   "2026-10-30T10:02:02Z ERROR [billing] FATAL: sorry, too many clients already",
+   "2026-10-30T10:03:03Z ERROR [billing] FATAL: sorry, too many clients already",
+   "2026-10-30T10:04:04Z ERROR [billing] FATAL: sorry, too many clients already",
+   "2026-10-30T10:05:05Z ERROR [billing] FATAL: sorry, too many clients already",
+   "2026-10-30T10:06:06Z ERROR [billing] FATAL: sorry, too many clients already",
+   "2026-10-30T10:07:07Z ERROR [billing] FATAL: sorry, too many clients already"
+  ]
+ },
+ {
+  "id": "pool-3",
+  "expected_runbook": "db-connection-pool",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z CRITICAL [users] could not obtain database connection, all 0 slots busy",
+   "2026-10-30T10:01:01Z CRITICAL [users] could not obtain database connection, all 1 slots busy",
+   "2026-10-30T10:02:02Z CRITICAL [users] could not obtain database connection, all 2 slots busy"
+  ]
+ },
+ {
+  "id": "disk-1",
+  "expected_runbook": "disk-full",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [ingest] write failed: no space left on device /var/lib/data/seg-0.wal",
+   "2026-10-30T10:01:01Z ERROR [ingest] write failed: no space left on device /var/lib/data/seg-1.wal",
+   "2026-10-30T10:02:02Z ERROR [ingest] write failed: no space left on device /var/lib/data/seg-2.wal",
+   "2026-10-30T10:03:03Z ERROR [ingest] write failed: no space left on device /var/lib/data/seg-3.wal",
+   "2026-10-30T10:04:04Z ERROR [ingest] write failed: no space left on device /var/lib/data/seg-4.wal",
+   "2026-10-30T10:05:05Z ERROR [ingest] write failed: no space left on device /var/lib/data/seg-5.wal"
+  ]
+ },
+ {
+  "id": "disk-2",
+  "expected_runbook": "disk-full",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [logger] ENOSPC while writing /tmp/spool/0.tmp",
+   "2026-10-30T10:01:01Z ERROR [logger] ENOSPC while writing /tmp/spool/1.tmp",
+   "2026-10-30T10:02:02Z ERROR [logger] ENOSPC while writing /tmp/spool/2.tmp",
+   "2026-10-30T10:03:03Z ERROR [logger] ENOSPC while writing /tmp/spool/3.tmp",
+   "2026-10-30T10:04:04Z ERROR [logger] ENOSPC while writing /tmp/spool/4.tmp"
+  ]
+ },
+ {
+  "id": "disk-3",
+  "expected_runbook": "disk-full",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z CRITICAL [postgres] could not extend file: disk is full on volume /dev/sdb1",
+   "2026-10-30T10:01:01Z CRITICAL [postgres] could not extend file: disk is full on volume /dev/sdb1"
+  ]
+ },
+ {
+  "id": "oom-1",
+  "expected_runbook": "oom-killed",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [worker] container exited with code 137 OOMKilled",
+   "2026-10-30T10:01:01Z ERROR [worker] container exited with code 137 OOMKilled",
+   "2026-10-30T10:02:02Z ERROR [worker] container exited with code 137 OOMKilled",
+   "2026-10-30T10:03:03Z ERROR [worker] container exited with code 137 OOMKilled"
+  ]
+ },
+ {
+  "id": "oom-2",
+  "expected_runbook": "oom-killed",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z CRITICAL [kernel] Out of memory: Killed process 0 (java)",
+   "2026-10-30T10:01:01Z CRITICAL [kernel] Out of memory: Killed process 1 (java)"
+  ]
+ },
+ {
+  "id": "oom-3",
+  "expected_runbook": "oom-killed",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [search] java.lang.OutOfMemoryError: Java heap space",
+   "2026-10-30T10:01:01Z ERROR [search] java.lang.OutOfMemoryError: Java heap space",
+   "2026-10-30T10:02:02Z ERROR [search] java.lang.OutOfMemoryError: Java heap space",
+   "2026-10-30T10:03:03Z ERROR [search] java.lang.OutOfMemoryError: Java heap space",
+   "2026-10-30T10:04:04Z ERROR [search] java.lang.OutOfMemoryError: Java heap space",
+   "2026-10-30T10:05:05Z ERROR [search] java.lang.OutOfMemoryError: Java heap space",
+   "2026-10-30T10:06:06Z ERROR [search] java.lang.OutOfMemoryError: Java heap space"
+  ]
+ },
+ {
+  "id": "tls-1",
+  "expected_runbook": "tls-cert-expired",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:01:01Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:02:02Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:03:03Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:04:04Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:05:05Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:06:06Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:07:07Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:08:08Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:09:09Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:10:10Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:11:11Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:12:12Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:13:13Z ERROR [gateway] x509: certificate has expired or is not yet valid",
+   "2026-10-30T10:14:14Z ERROR [gateway] x509: certificate has expired or is not yet valid"
+  ]
+ },
+ {
+  "id": "tls-2",
+  "expected_runbook": "tls-cert-expired",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [mobile-bff] SSL handshake failed: certificate verify failed (certificate expired)",
+   "2026-10-30T10:01:01Z ERROR [mobile-bff] SSL handshake failed: certificate verify failed (certificate expired)",
+   "2026-10-30T10:02:02Z ERROR [mobile-bff] SSL handshake failed: certificate verify failed (certificate expired)",
+   "2026-10-30T10:03:03Z ERROR [mobile-bff] SSL handshake failed: certificate verify failed (certificate expired)",
+   "2026-10-30T10:04:04Z ERROR [mobile-bff] SSL handshake failed: certificate verify failed (certificate expired)",
+   "2026-10-30T10:05:05Z ERROR [mobile-bff] SSL handshake failed: certificate verify failed (certificate expired)",
+   "2026-10-30T10:06:06Z ERROR [mobile-bff] SSL handshake failed: certificate verify failed (certificate expired)",
+   "2026-10-30T10:07:07Z ERROR [mobile-bff] SSL handshake failed: certificate verify failed (certificate expired)",
+   "2026-10-30T10:08:08Z ERROR [mobile-bff] SSL handshake failed: certificate verify failed (certificate expired)"
+  ]
+ },
+ {
+  "id": "tls-3",
+  "expected_runbook": "tls-cert-expired",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [payments] upstream https://partner.example.com certificate expired on 2026-10-29",
+   "2026-10-30T10:01:01Z ERROR [payments] upstream https://partner.example.com certificate expired on 2026-10-29",
+   "2026-10-30T10:02:02Z ERROR [payments] upstream https://partner.example.com certificate expired on 2026-10-29",
+   "2026-10-30T10:03:03Z ERROR [payments] upstream https://partner.example.com certificate expired on 2026-10-29"
+  ]
+ },
+ {
+  "id": "kafka-1",
+  "expected_runbook": "kafka-consumer-lag",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z WARN [events] consumer group billing-cg rebalancing, partitions revoked",
+   "2026-10-30T10:01:01Z WARN [events] consumer group billing-cg rebalancing, partitions revoked",
+   "2026-10-30T10:02:02Z WARN [events] consumer group billing-cg rebalancing, partitions revoked",
+   "2026-10-30T10:03:03Z WARN [events] consumer group billing-cg rebalancing, partitions revoked",
+   "2026-10-30T10:04:04Z WARN [events] consumer group billing-cg rebalancing, partitions revoked",
+   "2026-10-30T10:05:05Z WARN [events] consumer group billing-cg rebalancing, partitions revoked"
+  ]
+ },
+ {
+  "id": "kafka-2",
+  "expected_runbook": "kafka-consumer-lag",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [events] commit failed: poll timeout exceeded max.poll.interval.ms",
+   "2026-10-30T10:01:01Z ERROR [events] commit failed: poll timeout exceeded max.poll.interval.ms",
+   "2026-10-30T10:02:02Z ERROR [events] commit failed: poll timeout exceeded max.poll.interval.ms",
+   "2026-10-30T10:03:03Z ERROR [events] commit failed: poll timeout exceeded max.poll.interval.ms",
+   "2026-10-30T10:04:04Z ERROR [events] commit failed: poll timeout exceeded max.poll.interval.ms"
+  ]
+ },
+ {
+  "id": "kafka-3",
+  "expected_runbook": "kafka-consumer-lag",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z WARN [analytics] consumer lag for topic clicks is 000000 messages",
+   "2026-10-30T10:01:01Z WARN [analytics] consumer lag for topic clicks is 100000 messages",
+   "2026-10-30T10:02:02Z WARN [analytics] consumer lag for topic clicks is 200000 messages",
+   "2026-10-30T10:03:03Z WARN [analytics] consumer lag for topic clicks is 300000 messages"
+  ]
+ },
+ {
+  "id": "rate-1",
+  "expected_runbook": "rate-limit-429",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:01:01Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:02:02Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:03:03Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:04:04Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:05:05Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:06:06Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:07:07Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:08:08Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:09:09Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:10:10Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:11:11Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:12:12Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:13:13Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:14:14Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:15:15Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:16:16Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:17:17Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:18:18Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30",
+   "2026-10-30T10:19:19Z WARN [sync] HTTP 429 Too Many Requests from api.vendor.com, Retry-After: 30"
+  ]
+ },
+ {
+  "id": "rate-2",
+  "expected_runbook": "rate-limit-429",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [mailer] rate limit exceeded for provider, retrying in 0s",
+   "2026-10-30T10:01:01Z ERROR [mailer] rate limit exceeded for provider, retrying in 1s",
+   "2026-10-30T10:02:02Z ERROR [mailer] rate limit exceeded for provider, retrying in 2s",
+   "2026-10-30T10:03:03Z ERROR [mailer] rate limit exceeded for provider, retrying in 3s",
+   "2026-10-30T10:04:04Z ERROR [mailer] rate limit exceeded for provider, retrying in 4s",
+   "2026-10-30T10:05:05Z ERROR [mailer] rate limit exceeded for provider, retrying in 5s",
+   "2026-10-30T10:06:06Z ERROR [mailer] rate limit exceeded for provider, retrying in 6s",
+   "2026-10-30T10:07:07Z ERROR [mailer] rate limit exceeded for provider, retrying in 7s",
+   "2026-10-30T10:08:08Z ERROR [mailer] rate limit exceeded for provider, retrying in 8s",
+   "2026-10-30T10:09:09Z ERROR [mailer] rate limit exceeded for provider, retrying in 9s"
+  ]
+ },
+ {
+  "id": "rate-3",
+  "expected_runbook": "rate-limit-429",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:01:01Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:02:02Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:03:03Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:04:04Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:05:05Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:06:06Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:07:07Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:08:08Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:09:09Z WARN [crawler] received 429 from upstream api, backing off",
+   "2026-10-30T10:10:10Z WARN [crawler] received 429 from upstream api, backing off"
+  ]
+ },
+ {
+  "id": "dns-1",
+  "expected_runbook": "dns-resolution",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [checkout] dial tcp: lookup payments.internal: no such host",
+   "2026-10-30T10:01:01Z ERROR [checkout] dial tcp: lookup payments.internal: no such host",
+   "2026-10-30T10:02:02Z ERROR [checkout] dial tcp: lookup payments.internal: no such host",
+   "2026-10-30T10:03:03Z ERROR [checkout] dial tcp: lookup payments.internal: no such host",
+   "2026-10-30T10:04:04Z ERROR [checkout] dial tcp: lookup payments.internal: no such host",
+   "2026-10-30T10:05:05Z ERROR [checkout] dial tcp: lookup payments.internal: no such host",
+   "2026-10-30T10:06:06Z ERROR [checkout] dial tcp: lookup payments.internal: no such host",
+   "2026-10-30T10:07:07Z ERROR [checkout] dial tcp: lookup payments.internal: no such host",
+   "2026-10-30T10:08:08Z ERROR [checkout] dial tcp: lookup payments.internal: no such host"
+  ]
+ },
+ {
+  "id": "dns-2",
+  "expected_runbook": "dns-resolution",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [cron] Temporary failure in name resolution while contacting redis-master",
+   "2026-10-30T10:01:01Z ERROR [cron] Temporary failure in name resolution while contacting redis-master",
+   "2026-10-30T10:02:02Z ERROR [cron] Temporary failure in name resolution while contacting redis-master",
+   "2026-10-30T10:03:03Z ERROR [cron] Temporary failure in name resolution while contacting redis-master",
+   "2026-10-30T10:04:04Z ERROR [cron] Temporary failure in name resolution while contacting redis-master",
+   "2026-10-30T10:05:05Z ERROR [cron] Temporary failure in name resolution while contacting redis-master"
+  ]
+ },
+ {
+  "id": "dns-3",
+  "expected_runbook": "dns-resolution",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:01:01Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:02:02Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:03:03Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:04:04Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:05:05Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:06:06Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:07:07Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:08:08Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:09:09Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:10:10Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:11:11Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:12:12Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc",
+   "2026-10-30T10:13:13Z ERROR [frontend] getaddrinfo ENOTFOUND auth-service.svc"
+  ]
+ },
+ {
+  "id": "cpu-1",
+  "expected_runbook": "high-latency-cpu",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z WARN [api] request took too long: p99 latency 000ms, cpu throttled",
+   "2026-10-30T10:01:01Z WARN [api] request took too long: p99 latency 100ms, cpu throttled",
+   "2026-10-30T10:02:02Z WARN [api] request took too long: p99 latency 200ms, cpu throttled",
+   "2026-10-30T10:03:03Z WARN [api] request took too long: p99 latency 300ms, cpu throttled",
+   "2026-10-30T10:04:04Z WARN [api] request took too long: p99 latency 400ms, cpu throttled",
+   "2026-10-30T10:05:05Z WARN [api] request took too long: p99 latency 500ms, cpu throttled",
+   "2026-10-30T10:06:06Z WARN [api] request took too long: p99 latency 600ms, cpu throttled",
+   "2026-10-30T10:07:07Z WARN [api] request took too long: p99 latency 700ms, cpu throttled"
+  ]
+ },
+ {
+  "id": "cpu-2",
+  "expected_runbook": "high-latency-cpu",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:01:01Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:02:02Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:03:03Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:04:04Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:05:05Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:06:06Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:07:07Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:08:08Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:09:09Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:10:10Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:11:11Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent",
+   "2026-10-30T10:12:12Z ERROR [api] deadline exceeded calling recommender, CPU at 100 percent"
+  ]
+ },
+ {
+  "id": "cpu-3",
+  "expected_runbook": "high-latency-cpu",
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [lb] health check timed out after 0s, node CPU saturated",
+   "2026-10-30T10:01:01Z ERROR [lb] health check timed out after 1s, node CPU saturated",
+   "2026-10-30T10:02:02Z ERROR [lb] health check timed out after 2s, node CPU saturated",
+   "2026-10-30T10:03:03Z ERROR [lb] health check timed out after 3s, node CPU saturated",
+   "2026-10-30T10:04:04Z ERROR [lb] health check timed out after 4s, node CPU saturated"
+  ]
+ },
+ {
+  "id": "neg-1",
+  "expected_runbook": null,
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z ERROR [cart] unexpected unicorn event in widget renderer color=purple",
+   "2026-10-30T10:01:01Z ERROR [cart] unexpected unicorn event in widget renderer color=purple",
+   "2026-10-30T10:02:02Z ERROR [cart] unexpected unicorn event in widget renderer color=purple"
+  ]
+ },
+ {
+  "id": "neg-2",
+  "expected_runbook": null,
+  "logs": [
+   "2026-10-30T10:00:00Z INFO [web] GET /health 200 in 0ms",
+   "2026-10-30T10:01:01Z INFO [web] GET /health 200 in 1ms",
+   "2026-10-30T10:02:02Z INFO [web] GET /health 200 in 2ms",
+   "2026-10-30T10:00:00Z WARN [scheduler] job zxq finished with quokka status",
+   "2026-10-30T10:01:01Z WARN [scheduler] job zxq finished with quokka status"
+  ]
+ }
+]
