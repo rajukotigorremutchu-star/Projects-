@@ -1,0 +1,21 @@
+ticket_id,text,label,template_id
+T00000,My account is locked after too many sign in attempts Any update would be appreciated.,account_access,account_access:1
+T00001,Urgent: My order has not arrived and the tracking number shows no movement This is really frustrating.,shipping,shipping:0
+T00002,Cancel my subscription and refund the last charge Thanks!,billing,billing:4
+T00003,My order has not arrived and the tracking number shows no movement Any update would be appreciated.,shipping,shipping:0
+T00004,"Good morning. Please change the email address on my account, I lost access to the old one Please help.",account_access,account_access:3
+T00005,Good morning. The app crashes every time I open the inventory page Regards,bug,bug:0
+T00006,Urgent: Cancel my subscription and refund the last charge Please help.,billing,billing:4
+T00007,"Hey, Can you build an integration with Slack for notifications Thanks!",feature_request,feature_request:2
+T00008,"Hello, I forgot my username and cannot access my enterprise workspace Any update would be appreciated.",account_access,account_access:4
+T00009,"Hi team, Cancel my subscription and refund the last charge This is really frustrating.",billing,billing:4
+T00010,Good morning. Cancel my subscription and refund the last charge This is really frustrating.,billing,billing:4
+T00011,"Hey, It would be great if you added dark mode to the inventory view Regards",feature_request,feature_request:0
+T00012,"Hey, Single sign on redirects me back to the login screen Please help.",shipping,account_access:5
+T00013,"Hi team, My account is locked after too many sign in attempts Please help.",account_access,account_access:1
+T00014,"Hi team, Page freezes and shows a blank screen when loading calendar This is really frustrating.",bug,bug:3
+T00015,"Hey, My account is locked after too many sign in attempts This is really frustrating.",account_access,account_access:1
+T00016,"Hi team, Please add support for exporting dashboard to CSV Thanks!",feature_request,feature_request:1
+T00017,Need a receipt for the payment I made on Friday Thanks!,billing,billing:3
+T00018,Good morning. I forgot my username and cannot access my team workspace Regards,account_access,account_access:4
+T00019,Urgent: Need a receipt for the payment I made on the 3rd,billing,billing:3

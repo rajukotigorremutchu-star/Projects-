@@ -1,0 +1,28 @@
+{
+  "random_split": {
+    "split": "random",
+    "n_train": 819,
+    "n_test": 273,
+    "baseline_majority": {
+      "accuracy": 0.2491,
+      "macro_f1": 0.0798
+    },
+    "tfidf_logreg": {
+      "accuracy": 0.978,
+      "macro_f1": 0.9766
+    }
+  },
+  "group_split": {
+    "split": "group",
+    "n_train": 781,
+    "n_test": 311,
+    "baseline_majority": {
+      "accuracy": 0.0932,
+      "macro_f1": 0.0341
+    },
+    "tfidf_logreg": {
+      "accuracy": 0.1929,
+      "macro_f1": 0.1983
+    }
+  }
+}
