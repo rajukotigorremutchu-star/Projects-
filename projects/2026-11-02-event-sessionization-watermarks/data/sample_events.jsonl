@@ -1,0 +1,8 @@
+{"_batch":"b1","event_id":"e1","user_id":"alice","event_time":1000}
+{"_batch":"b1","event_id":"e3","user_id":"alice","event_time":1150}
+{"_batch":"b1","event_id":"e4","user_id":"bob","event_time":1100}
+{"_batch":"b2","event_id":"e2","user_id":"alice","event_time":1100}
+{"_batch":"b2","event_id":"e3","user_id":"alice","event_time":1150}
+{"_batch":"b2","event_id":"e5","user_id":"alice","event_time":2000}
+{"_batch":"b3","event_id":"e6","user_id":"bob","event_time":1500}
+{"_batch":"b3","event_id":"old","user_id":"bob","event_time":1000}
