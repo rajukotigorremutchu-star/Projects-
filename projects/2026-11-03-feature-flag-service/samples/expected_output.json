@@ -1,0 +1,90 @@
+{
+  "u1": {
+    "bulk-export": {
+      "reason": "default",
+      "rule_index": null,
+      "value": false
+    },
+    "button-color": {
+      "reason": "rule_match",
+      "rule_index": 0,
+      "value": "blue"
+    },
+    "legacy-api": {
+      "reason": "disabled",
+      "rule_index": null,
+      "value": false
+    },
+    "new-checkout": {
+      "reason": "rule_match",
+      "rule_index": 0,
+      "value": true
+    }
+  },
+  "u2": {
+    "bulk-export": {
+      "reason": "rule_match",
+      "rule_index": 0,
+      "value": true
+    },
+    "button-color": {
+      "reason": "rule_match",
+      "rule_index": 0,
+      "value": "blue"
+    },
+    "legacy-api": {
+      "reason": "disabled",
+      "rule_index": null,
+      "value": false
+    },
+    "new-checkout": {
+      "reason": "default",
+      "rule_index": null,
+      "value": false
+    }
+  },
+  "u3": {
+    "bulk-export": {
+      "reason": "default",
+      "rule_index": null,
+      "value": false
+    },
+    "button-color": {
+      "reason": "rule_match",
+      "rule_index": 0,
+      "value": "red"
+    },
+    "legacy-api": {
+      "reason": "disabled",
+      "rule_index": null,
+      "value": false
+    },
+    "new-checkout": {
+      "reason": "default",
+      "rule_index": null,
+      "value": false
+    }
+  },
+  "u4": {
+    "bulk-export": {
+      "reason": "rule_match",
+      "rule_index": 0,
+      "value": true
+    },
+    "button-color": {
+      "reason": "rule_match",
+      "rule_index": 0,
+      "value": "red"
+    },
+    "legacy-api": {
+      "reason": "disabled",
+      "rule_index": null,
+      "value": false
+    },
+    "new-checkout": {
+      "reason": "default",
+      "rule_index": null,
+      "value": false
+    }
+  }
+}

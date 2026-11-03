@@ -1,0 +1,6 @@
+[
+  {"user_id": "u1", "email": "ann@example.com", "country": "US", "plan": "free", "seats": 1},
+  {"user_id": "u2", "email": "bob@gmail.com", "country": "DE", "plan": "pro", "seats": 25},
+  {"user_id": "u3", "email": "cy@gmail.com", "country": "JP", "plan": "enterprise", "seats": 5},
+  {"user_id": "u4", "country": "FR", "plan": "pro", "seats": 10}
+]
