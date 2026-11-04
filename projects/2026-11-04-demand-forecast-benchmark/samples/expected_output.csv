@@ -1,0 +1,5 @@
+model,mae,wape,mase
+seasonal_naive_7,19.616,0.1297,0.8732
+moving_avg_28,37.736,0.2496,1.6799
+ridge,15.599,0.1032,0.6944
+hist_gbm,13.735,0.0908,0.6114
