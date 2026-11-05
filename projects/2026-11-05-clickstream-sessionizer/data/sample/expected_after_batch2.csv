@@ -1,0 +1,3 @@
+user_id,session_start,session_end,duration_s,n_events,n_page_views,converted
+u1,2026-11-01 10:00:00,2026-11-01 11:00:00,3600,4,2,false
+u2,2026-11-01 10:00:00,2026-11-01 10:00:00,0,1,0,true
