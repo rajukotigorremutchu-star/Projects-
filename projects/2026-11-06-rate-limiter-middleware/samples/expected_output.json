@@ -1,0 +1,22 @@
+{
+  "fixed_window": {
+    "allowed": 15,
+    "rejected": 5,
+    "max_in_any_window": 10
+  },
+  "sliding_log": {
+    "allowed": 10,
+    "rejected": 10,
+    "max_in_any_window": 5
+  },
+  "sliding_counter": {
+    "allowed": 10,
+    "rejected": 10,
+    "max_in_any_window": 5
+  },
+  "token_bucket": {
+    "allowed": 14,
+    "rejected": 6,
+    "max_in_any_window": 9
+  }
+}
