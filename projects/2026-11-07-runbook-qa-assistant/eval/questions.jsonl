@@ -1,0 +1,36 @@
+{"id":"q01","question":"How do I promote the replica when the primary database dies?","gold_chunk":"postgres-failover#promoting-the-replica","answer_keywords":["patronictl"]}
+{"id":"q02","question":"How long does seeding a 500 GB database as a replica take?","gold_chunk":"postgres-failover#rebuilding-the-old-primary","answer_keywords":["40 minutes"]}
+{"id":"q03","question":"When should the on-call engineer avoid failing over because of replication lag?","gold_chunk":"postgres-failover#detecting-primary-failure","answer_keywords":["60 seconds"]}
+{"id":"q04","question":"At what lag does Kafka raise a critical page?","gold_chunk":"kafka-consumer-lag#alert-thresholds","answer_keywords":["1 million"]}
+{"id":"q05","question":"How do I skip a poison message on a partition?","gold_chunk":"kafka-consumer-lag#skipping-a-poison-message","answer_keywords":["reset-offsets"]}
+{"id":"q06","question":"Why would consumers rebalance repeatedly?","gold_chunk":"kafka-consumer-lag#diagnosing-slow-consumers","answer_keywords":["session timeout"]}
+{"id":"q07","question":"How many days before expiry does certificate renewal start?","gold_chunk":"tls-certificate-renewal#automatic-renewal","answer_keywords":["30 days"]}
+{"id":"q08","question":"What is the usual cause when the HTTP-01 challenge fails for cert-manager?","gold_chunk":"tls-certificate-renewal#when-renewal-fails","answer_keywords":["acme-challenge"]}
+{"id":"q09","question":"How long is the internal CA certificate valid for the emergency issue?","gold_chunk":"tls-certificate-renewal#emergency-manual-issue","answer_keywords":["7 days"]}
+{"id":"q10","question":"Which command finds the biggest keys in Redis?","gold_chunk":"redis-memory-pressure#finding-large-keys","answer_keywords":["--bigkeys"]}
+{"id":"q11","question":"What eviction policy and memory limit does the Redis cache use?","gold_chunk":"redis-memory-pressure#symptoms","answer_keywords":["allkeys-lru"]}
+{"id":"q12","question":"What is the quick fix for Redis session keys with no TTL?","gold_chunk":"redis-memory-pressure#mitigation","answer_keywords":["24 hour"]}
+{"id":"q13","question":"What error rate after a deploy means I should roll back?","gold_chunk":"deploy-rollback#when-to-roll-back","answer_keywords":["2 percent"]}
+{"id":"q14","question":"Why must automated sync be disabled before an Argo CD rollback?","gold_chunk":"deploy-rollback#rolling-back-with-argo-cd","answer_keywords":["redeploy"]}
+{"id":"q15","question":"Are database migrations rolled back automatically with a release?","gold_chunk":"deploy-rollback#database-migrations","answer_keywords":["forward-only"]}
+{"id":"q16","question":"How often do we post status page updates for a Severity 1 incident?","gold_chunk":"incident-communication#update-cadence","answer_keywords":["30 minutes"]}
+{"id":"q17","question":"Who owns the postmortem document and when is it due?","gold_chunk":"incident-communication#postmortems","answer_keywords":["incident commander"]}
+{"id":"q18","question":"What defines a Severity 2 incident?","gold_chunk":"incident-communication#severity-levels","answer_keywords":["major degradation"]}
+{"id":"q19","question":"How do I upgrade the Elasticsearch cluster to a new version?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q20","question":"What is the vacation policy for engineers?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q21","question":"How do I configure the Jenkins build agents?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q22","question":"Who is the CEO of the company?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q23","question":"How do I restore a MongoDB backup?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q24","question":"What is the password rotation schedule for the VPN?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q25","question":"What does pg_is_in_recovery() need to return after promotion?","gold_chunk":"postgres-failover#promoting-the-replica","answer_keywords":["false"]}
+{"id":"q26","question":"Which exporter measures consumer group lag?","gold_chunk":"kafka-consumer-lag#alert-thresholds","answer_keywords":["kafka-lag-exporter"]}
+{"id":"q27","question":"How many duplicate certificates does Let's Encrypt allow per week?","gold_chunk":"tls-certificate-renewal#when-renewal-fails","answer_keywords":["5 duplicate"]}
+{"id":"q28","question":"Why shouldn't I run bigkeys against the Redis primary?","gold_chunk":"redis-memory-pressure#finding-large-keys","answer_keywords":["load"]}
+{"id":"q29","question":"How long does a standard rollback take?","gold_chunk":"deploy-rollback#rolling-back-with-argo-cd","answer_keywords":["3 minutes"]}
+{"id":"q30","question":"Do Severity 3 incidents need a status page update?","gold_chunk":"incident-communication#severity-levels","answer_keywords":["Severity 1 and 2"]}
+{"id":"q31","question":"How do I resize an S3 bucket?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q32","question":"What is our on-call compensation?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q33","question":"How do I debug a slow SQL query in MySQL?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q34","question":"How do I reset a user's password in Okta?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q35","question":"How do I scale the Kubernetes node pool?","gold_chunk":null,"answer_keywords":[]}
+{"id":"q36","question":"Which database should I use for analytics workloads?","gold_chunk":null,"answer_keywords":[]}
