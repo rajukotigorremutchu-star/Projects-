@@ -1,0 +1,1 @@
+{"service": "checkout", "minute": "2026-01-10T15:00:00", "requests": 44, "error_rate": 0.0227, "p95_ms": 200.0}
