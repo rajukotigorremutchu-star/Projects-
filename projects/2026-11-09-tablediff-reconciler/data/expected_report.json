@@ -1,0 +1,51 @@
+{
+  "key": "order_id",
+  "compared_columns": [
+    "customer",
+    "amount",
+    "status"
+  ],
+  "columns_only_in_source": [],
+  "columns_only_in_target": [],
+  "summary": {
+    "source_rows": 300,
+    "target_rows": 298,
+    "missing_in_target": 3,
+    "extra_in_target": 1,
+    "changed_rows": 2,
+    "identical_rows": 295
+  },
+  "missing_in_target": [
+    251,
+    252,
+    253
+  ],
+  "extra_in_target": [
+    999
+  ],
+  "changed": [
+    {
+      "key": 10,
+      "columns": {
+        "status": {
+          "source": "paid",
+          "target": "refunded"
+        }
+      }
+    },
+    {
+      "key": 121,
+      "columns": {
+        "amount": {
+          "source": "60.38",
+          "target": "999.99"
+        }
+      }
+    }
+  ],
+  "stats": {
+    "segments_checked": 31,
+    "segments_pruned_by_checksum": 12,
+    "rows_detail_compared": 24
+  }
+}
