@@ -1,0 +1,26 @@
+[
+  {
+    "algorithm": "fixed_window",
+    "accepted": 30,
+    "max_in_any_10s_span": 20,
+    "violates_limit": true
+  },
+  {
+    "algorithm": "sliding_log",
+    "accepted": 20,
+    "max_in_any_10s_span": 10,
+    "violates_limit": false
+  },
+  {
+    "algorithm": "sliding_counter",
+    "accepted": 20,
+    "max_in_any_10s_span": 10,
+    "violates_limit": false
+  },
+  {
+    "algorithm": "token_bucket",
+    "accepted": 20,
+    "max_in_any_10s_span": 10,
+    "violates_limit": false
+  }
+]
