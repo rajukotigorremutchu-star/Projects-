@@ -1,0 +1,32 @@
+{
+  "new-checkout": {
+    "description": "Gradual rollout of the new checkout, internal staff first",
+    "enabled": true,
+    "off_value": false,
+    "default_value": false,
+    "salt": "v1",
+    "rules": [
+      {"description": "staff always", "conditions": [{"attribute": "email", "op": "ends_with", "value": "@example.com"}], "value": true},
+      {"description": "50% of EU/UK", "conditions": [{"attribute": "country", "op": "in", "value": ["DE", "FR", "GB"]}], "rollout": 50, "value": true}
+    ]
+  },
+  "button-color": {
+    "description": "A/B/C test",
+    "enabled": true,
+    "off_value": "blue",
+    "default_value": "blue",
+    "salt": "exp1",
+    "rules": [
+      {"conditions": [], "split": [{"value": "blue", "weight": 34}, {"value": "green", "weight": 33}, {"value": "red", "weight": 33}]}
+    ]
+  },
+  "bulk-export": {
+    "description": "Only large plans",
+    "enabled": true,
+    "default_value": false,
+    "rules": [
+      {"conditions": [{"attribute": "plan", "op": "in", "value": ["pro", "enterprise"]}, {"attribute": "seats", "op": "gte", "value": 10}], "value": true}
+    ]
+  },
+  "legacy-api": {"description": "Killed", "enabled": false, "off_value": false, "default_value": true}
+}
