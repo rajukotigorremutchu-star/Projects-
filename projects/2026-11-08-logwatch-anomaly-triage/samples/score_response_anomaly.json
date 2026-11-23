@@ -1,0 +1,9 @@
+{
+  "anomaly": true,
+  "baseline_score": 18.901,
+  "iforest_score": 0.6487,
+  "likely_kind": "error_spike",
+  "reasons": [
+    "error rate 0.41 is above typical 0 for this hour (robust z=+18.9)"
+  ]
+}

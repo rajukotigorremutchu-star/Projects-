@@ -1,0 +1,36 @@
+{
+  "config": {
+    "days": 6,
+    "seed": 7,
+    "raw_log_rows": 818760,
+    "train_minutes": 12960,
+    "test_minutes": 12960,
+    "test_incident_minutes": 254
+  },
+  "robust_z_baseline": {
+    "precision": 0.8541,
+    "recall": 0.9449,
+    "f1": 0.8972,
+    "tp": 240,
+    "fp": 41,
+    "fn": 14,
+    "incident_level": {
+      "incidents": 18,
+      "detected": 18,
+      "recall": 1.0
+    }
+  },
+  "isolation_forest": {
+    "precision": 0.8382,
+    "recall": 0.2244,
+    "f1": 0.354,
+    "tp": 57,
+    "fp": 11,
+    "fn": 197,
+    "incident_level": {
+      "incidents": 18,
+      "detected": 10,
+      "recall": 0.5556
+    }
+  }
+}
