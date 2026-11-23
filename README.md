@@ -9,4 +9,5 @@ Daily portfolio projects across data engineering, software engineering, and AI/M
 | 2026-10-28 | [Appointment No-Show Prediction (temporal split, leakage tests)](projects/2026-10-28-appointment-noshow-model/) | Machine learning |
 | 2026-11-01 | [Ticket Triage Service (ETL + scikit-learn + FastAPI)](projects/2026-11-01-ticket-triage-service/) | Data + software + ML |
 | 2026-11-03 | [Feature Flag Service (FastAPI, sticky rollouts, A/B splits)](projects/2026-11-03-feature-flag-service/) | Software engineering |
+| 2026-11-04 | [Demand Forecast Benchmark (leakage-safe time-series ML, scikit-learn)](projects/2026-11-04-demand-forecast-benchmark/) | Machine learning |
 | 2026-11-10 | [Rate Limiter Middleware (FastAPI, 4 algorithms, simulation)](projects/2026-11-10-rate-limiter-middleware/) | Software engineering |
