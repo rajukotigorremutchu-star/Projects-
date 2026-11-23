@@ -1,0 +1,23 @@
+{
+  "n_train": 3904,
+  "n_test": 1308,
+  "train_noshow_rate": 0.2469,
+  "test_noshow_rate": 0.276,
+  "models": {
+    "baseline_train_prior": {
+      "roc_auc": 0.5,
+      "pr_auc": 0.276,
+      "brier": 0.2007
+    },
+    "logistic_regression": {
+      "roc_auc": 0.6333,
+      "pr_auc": 0.3898,
+      "brier": 0.1915
+    },
+    "hist_gradient_boosting": {
+      "roc_auc": 0.6182,
+      "pr_auc": 0.37,
+      "brier": 0.1956
+    }
+  }
+}
