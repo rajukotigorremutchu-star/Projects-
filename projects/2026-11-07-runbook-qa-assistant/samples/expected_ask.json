@@ -1,0 +1,7 @@
+{
+  "answer": "Pause the consumer group, then use `kafka-consumer-groups.sh --reset-offsets --shift-by 1` to skip one offset on the affected partition. Always copy the skipped message to the `dead-letter` topic first so it can be analysed later.",
+  "citations": [
+    "kafka-consumer-lag#skipping-a-poison-message"
+  ],
+  "abstained": false
+}
