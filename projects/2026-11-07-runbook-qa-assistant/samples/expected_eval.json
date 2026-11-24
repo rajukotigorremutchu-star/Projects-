@@ -1,0 +1,29 @@
+{
+  "mode": "extractive",
+  "dev_size": 18,
+  "test_size": 18,
+  "tuned_threshold": 0.5,
+  "retrieval_test": {
+    "n": 12,
+    "hit@3": 0.9166666666666666,
+    "mrr": 0.9166666666666666
+  },
+  "baseline_never_abstain_test": {
+    "n": 18,
+    "answerable": 12,
+    "unanswerable": 6,
+    "answered_of_answerable": 12,
+    "answer_keyword_rate": 0.9166666666666666,
+    "citation_correct_rate": 0.9166666666666666,
+    "overall_correct": 0.6666666666666666
+  },
+  "with_abstention_test": {
+    "n": 18,
+    "answerable": 12,
+    "unanswerable": 6,
+    "answered_of_answerable": 12,
+    "answer_keyword_rate": 0.9166666666666666,
+    "citation_correct_rate": 0.9166666666666666,
+    "overall_correct": 0.9444444444444444
+  }
+}

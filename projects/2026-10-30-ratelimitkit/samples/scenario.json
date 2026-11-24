@@ -1,0 +1,14 @@
+{
+  "limiters": {
+    "fixed_window": {"type": "fixed_window", "limit": 3, "window": 10},
+    "sliding_log": {"type": "sliding_log", "limit": 3, "window": 10},
+    "sliding_counter": {"type": "sliding_counter", "limit": 3, "window": 10},
+    "token_bucket": {"type": "token_bucket", "capacity": 3, "refill_rate": 0.3}
+  },
+  "requests": [
+    {"t": 0, "key": "a"}, {"t": 1, "key": "a"}, {"t": 2, "key": "a"}, {"t": 3, "key": "a"},
+    {"t": 9, "key": "a"}, {"t": 10, "key": "a"}, {"t": 11, "key": "a"}, {"t": 12, "key": "a"},
+    {"t": 15, "key": "a"}, {"t": 21, "key": "a"},
+    {"t": 3, "key": "b", "cost": 2}, {"t": 4, "key": "b", "cost": 2}
+  ]
+}
